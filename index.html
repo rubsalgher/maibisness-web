@@ -1,270 +1,78 @@
-<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<!doctype html>
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mai Bisness • El Software de Punto de Venta para el Comercio Real</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0F172A',
-                        slateDark: '#1E293B',
-                        brandOrange: '#FF6B35',
-                        brandGreen: '#04A777',
-                        brandGold: '#FFD700',
-                        brandBlue: '#3B82F6',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-brand { font-family: 'Space Grotesk', sans-serif; }
-        .glow-orange { box-shadow: 0 0 30px -5px rgba(255, 107, 53, 0.4); }
-        .glow-green { box-shadow: 0 0 30px -5px rgba(4, 167, 119, 0.4); }
-        .glow-gold { box-shadow: 0 0 30px -5px rgba(255, 215, 0, 0.2); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Mai Bisness es el punto de venta para Android y Windows con inventario, reportes, respaldo en la nube y control de sucursales.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.maibisness.com/">
+  <link rel="icon" href="/logoMaiBisness_original.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logoMaiBisness_original.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Mai Bisness | Tu negocio, bajo control">
+  <meta property="og:description" content="Cobra, administra inventario y consulta tus sucursales desde Android y Windows.">
+  <meta property="og:url" content="https://www.maibisness.com/">
+  <meta property="og:image" content="https://www.maibisness.com/og-mai-bisness.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mai Bisness | Tu negocio, bajo control">
+  <meta name="twitter:description" content="Punto de venta, inventario y sucursales para negocios reales.">
+  <meta name="twitter:image" content="https://www.maibisness.com/og-mai-bisness.png">
+  <title>Mai Bisness | Punto de venta para Android y Windows</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-navy text-gray-100 min-h-screen selection:bg-brandOrange selection:text-white overflow-x-hidden">
-
-    <nav class="border-b border-white/10 bg-navy/80 backdrop-blur-md fixed top-0 w-full z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <img src="logoMaiBisness_original.png" alt="Logo Mai Bisness" class="w-10 h-10 rounded-xl shadow-lg shadow-brandOrange/30">
-                <span class="font-brand font-black text-2xl tracking-wider bg-gradient-to-r from-white via-gray-200 to-brandOrange bg-clip-text text-transparent">
-                    MAI BISNESS
-                </span>
-            </div>
-            <a href="#descargas" class="bg-white/10 hover:bg-white/20 text-white font-bold px-5 py-2.5 rounded-full transition border border-white/15 text-sm">
-                ⬇️ Descargar Gratis
-            </a>
-        </div>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Mai Bisness, inicio"><img src="/logoMaiBisness_original.png" alt="" width="48" height="48"><span>MAI <strong>BISNESS</strong></span></a>
+      <div class="nav-links"><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#descargas">Descargas</a></div>
+      <a class="button button-small button-ghost" href="#descargas">Descargar</a>
     </nav>
-
-    <header class="pt-36 pb-20 px-6 relative">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brandOrange/20 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandGold/10 border border-brandGold/30 text-brandGold text-xs font-black tracking-widest uppercase mb-8">
-                Creado para tu Negocio Formal e Informal
-            </div>
-            <h1 class="font-brand font-black text-5xl md:text-7xl tracking-tight leading-none mb-8">
-                OLVÍDATE de las libretas y las cuentas lentas.
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 font-normal max-w-3xl mx-auto leading-relaxed mb-12">
-                El sistema de punto de venta de bolsillo, con lector de códigos de barras desde tu cámara y velocidad extrema para cuando tienes la fila llena de clientes. <span class="text-white font-bold">100% Gratis para empezar.</span>
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#descargas" class="bg-brandOrange hover:bg-brandOrange/90 text-white font-black px-8 py-5 rounded-2xl text-lg transition transform hover:-translate-y-1 glow-orange flex items-center gap-3">
-                    <span>🚀 OBTENER INSTALADORES</span>
-                </a>
-                <a href="#caracteristicas" class="bg-slateDark hover:bg-slateDark/80 text-gray-200 font-bold px-8 py-5 rounded-2xl text-lg transition border border-white/10 flex items-center gap-2">
-                    <span>¿Cómo funciona?</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <section id="descargas" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="font-brand font-black text-3xl md:text-5xl mb-4">Central de Descargas</h2>
-            <p class="text-gray-400 text-lg">Elige tu herramienta y empieza a blindar las finanzas de tu negocio hoy mismo.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slateDark rounded-3xl p-8 border border-white/10 relative overflow-hidden flex flex-col justify-between hover:border-brandGreen/50 transition duration-300 group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brandGreen/10 rounded-full blur-2xl group-hover:bg-brandGreen/20 transition"></div>
-                <div>
-                    <div class="w-14 h-14 rounded-2xl bg-brandGreen/20 flex items-center justify-center text-3xl mb-6 border border-brandGreen/30 text-brandGreen">
-                        📱
-                    </div>
-                    <span class="text-xs font-black tracking-widest text-brandGreen uppercase bg-brandGreen/10 px-3 py-1 rounded-full border border-brandGreen/20">Versión Móvil</span>
-                    <h3 class="font-brand font-bold text-2xl text-white mt-4 mb-2">Mai Bisness (APK)</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Instala la app directamente en tu celular o tablet Android. Incluye escáner de cámara, calculadora rápida con botones de corrección y reportes PDF al instante.
-                    </p>
-                </div>
-                <a href="descargas/MaiBisness.apk" download class="w-full bg-brandGreen hover:bg-brandGreen/90 text-navy font-black py-4 rounded-xl text-center block transition glow-green">
-                    DESCARGAR APK ANDROID
-                </a>
-            </div>
-
-            <div class="bg-slateDark rounded-3xl p-8 border border-white/10 relative overflow-hidden flex flex-col justify-between hover:border-brandOrange/50 transition duration-300 group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brandOrange/10 rounded-full blur-2xl group-hover:bg-brandOrange/20 transition"></div>
-                <div>
-                    <div class="w-14 h-14 rounded-2xl bg-brandOrange/20 flex items-center justify-center text-3xl mb-6 border border-brandOrange/30 text-brandOrange">
-                        💻
-                    </div>
-                    <span class="text-xs font-black tracking-widest text-brandOrange uppercase bg-brandOrange/10 px-3 py-1 rounded-full border border-brandOrange/20">Multi-dispositivo PRO</span>
-                    <h3 class="font-brand font-bold text-2xl text-white mt-4 mb-2">Terminal Windows</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        El instalador oficial (.exe) para tu computadora o laptop en el mostrador. Sincroniza tu inventario en la nube con tu PIN de seguridad y administra con teclado.
-                    </p>
-                </div>
-                <a href="descargas/MaiBisness_Setup.exe" download class="w-full bg-brandOrange hover:bg-brandOrange/90 text-white font-black py-4 rounded-xl text-center block transition glow-orange">
-                    DESCARGAR PARA WINDOWS
-                </a>
-            </div>
-
-            <div class="bg-slateDark rounded-3xl p-8 border border-white/10 relative overflow-hidden flex flex-col justify-between hover:border-brandGold/50 transition duration-300 group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brandGold/10 rounded-full blur-2xl group-hover:bg-brandGold/20 transition"></div>
-                <div>
-                    <div class="w-14 h-14 rounded-2xl bg-brandGold/20 flex items-center justify-center text-3xl mb-6 border border-brandGold/30 text-brandGold">
-                        📊
-                    </div>
-                    <span class="text-xs font-black tracking-widest text-brandGold uppercase bg-brandGold/10 px-3 py-1 rounded-full border border-brandGold/20">Carga Masiva</span>
-                    <h3 class="font-brand font-bold text-2xl text-white mt-4 mb-2">Plantilla de Inventario</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        ¿Tienes miles de productos? Descarga este archivo Excel/CSV con el formato exacto de columnas para importar todo tu catálogo a la app en un solo clic.
-                    </p>
-                </div>
-                <a href="descargas/plantilla_inventario.csv" download class="w-full bg-white/10 hover:bg-white/20 text-white font-black py-4 rounded-xl text-center block transition border border-white/15">
-                    DESCARGAR FORMATO CSV
-                </a>
-            </div>
-        </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy"><p class="eyebrow">Punto de venta para negocios reales</p><h1>Vende rápido.<br><span>Controla todo.</span></h1><p class="hero-lead">Cobra aun cuando falla internet, administra tu inventario y consulta tus sucursales desde el celular o la computadora.</p><div class="actions"><a class="button button-primary" href="#descargas">Descargar para Android</a><a class="button button-secondary" href="#planes">Conocer Mai Bisness PRO</a></div><p class="microcopy">Instalación directa para Android · 5 días de prueba Premium · Sin permanencia forzosa</p></div>
+        <div class="product-preview" aria-label="Resumen de funciones de Mai Bisness"><div class="preview-top"><span>Resumen del negocio</span><span class="live-dot">Sincronizado</span></div><div class="metric featured"><span>Ventas de hoy</span><strong>$4,860</strong><small>Actualización en tiempo real</small></div><div class="metric-row"><div class="metric"><span>Productos</span><strong>248</strong><small>Catálogo organizado</small></div><div class="metric"><span>Sucursales</span><strong>3</strong><small>Vista central</small></div></div><div class="stock-line"><span>Inventario protegido</span><span>✓ Respaldo activo</span></div></div>
+      </div>
     </section>
-
-    <section id="caracteristicas" class="py-20 px-6 bg-slateDark/30 border-y border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-brand font-black text-3xl md:text-5xl mb-4">Herramientas que Multiplican tu Dinero</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
-                <div>
-                    <div class="text-brandOrange text-4xl mb-4 flex justify-center lg:justify-start">⚡</div>
-                    <h4 class="font-brand font-bold text-xl text-white mb-2">Sin Internet para Cobrar</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        En ciertos negocios no siempre tienen buena señal. Mai Bisness guarda tus cobros y productos en la memoria de tu celular y sincroniza cuando vuelves a tener conexión.
-                    </p>
-                </div>
-                <div>
-                    <div class="text-brandGreen text-4xl mb-4 flex justify-center lg:justify-start">🔒</div>
-                    <h4 class="font-brand font-bold text-xl text-white mb-2">Modo Empleado Blindado</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Presta tu celular o tu computadora al cajero con total tranquilidad. Con tu PIN de seguridad privado, nadie podrá ver tus ganancias del día ni borrar el historial de ventas.
-                    </p>
-                </div>
-                <div>
-                    <div class="text-brandGold text-4xl mb-4 flex justify-center lg:justify-start">🎯</div>
-                    <h4 class="font-brand font-bold text-xl text-white mb-2">Calculadora Antierrores</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Números gigantes, botón de agrupamiento de artículos idénticos y herramientas de corrección instantánea para cancelar productos de último segundo sin rehacer toda la cuenta.
-                    </p>
-                </div>
-                <div>
-                    <div class="text-brandBlue text-4xl mb-4 flex justify-center lg:justify-start">🌍</div>
-                    <h4 class="font-brand font-bold text-xl text-white mb-2">Red Multi-Sucursales</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Vincula el celular de tus empleados mediante un código rápido. Las ventas de todos tus puestos en diferentes locales se unifican en tu tablero central. <span class="text-brandGold font-bold">(PRO)</span>
-                    </p>
-                </div>
-            </div>
+    <section class="trust-strip" aria-label="Ventajas principales"><div class="wrap trust-grid"><div><strong>⚡ Cobra sin internet</strong><span>Continúa vendiendo y sincroniza después.</span></div><div><strong>☁ Respaldo en la nube</strong><span>Protege catálogo, ventas y existencias.</span></div><div><strong>⌘ Android + Windows</strong><span>Combina celular y caja de mostrador.</span></div></div></section>
+    <section class="section" id="funciones"><div class="wrap"><p class="section-kicker">Todo en un mismo lugar</p><h2>Menos libreta. Más control.</h2><p class="section-intro">Diseñado para tiendas, puestos, bazares y comercios que necesitan cobrar con rapidez sin perder de vista sus números.</p><div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon">▦</span><h3>Inventario claro</h3><p>Registra productos, costos, precios y existencias. Los cambios se reflejan entre tus dispositivos autorizados.</p></article>
+      <article class="feature-card"><span class="feature-icon">▥</span><h3>Cobro sin complicaciones</h3><p>Agrega productos rápidamente, corrige cantidades y descuenta existencias al confirmar cada venta.</p></article>
+      <article class="feature-card"><span class="feature-icon">⌁</span><h3>Reportes útiles</h3><p>Consulta ventas, utilidad y movimientos por periodos para tomar decisiones con información real.</p></article>
+      <article class="feature-card"><span class="feature-icon">◎</span><h3>Sucursales conectadas</h3><p>Vincula cajas mediante códigos temporales de seis dígitos y revisa cada sucursal desde una vista central.</p></article>
+      <article class="feature-card"><span class="feature-icon">⌾</span><h3>Escáner con cámara</h3><p>Lee códigos de barras desde el celular para encontrar productos y atender más rápido.</p></article>
+      <article class="feature-card"><span class="feature-icon">✓</span><h3>Accesos protegidos</h3><p>Los códigos de vinculación vencen y sólo pueden usarse una vez. Cada dispositivo recibe el acceso que le corresponde.</p></article>
+    </div></div></section>
+    <section class="section section-alt" id="planes"><div class="wrap"><p class="section-kicker">Precios sencillos</p><h2>Empieza gratis y activa PRO cuando lo necesites.</h2><p class="section-intro">La aplicación conserva funciones locales gratuitas. PRO agrega respaldo, sincronización, dispositivos y reportes avanzados.</p><div class="pricing-grid">
+      <article class="price-card"><p class="plan-label">GRATIS</p><h3>$0 <small>MXN</small></h3><p>Para operar localmente desde un dispositivo.</p><ul><li>Inventario y ventas locales</li><li>Escáner de códigos</li><li>Reporte del día actual</li><li>Funcionamiento sin conexión</li></ul></article>
+      <article class="price-card recommended"><p class="badge">Más flexible</p><p class="plan-label">PRO MENSUAL</p><h3>$80 <small>MXN/mes</small></h3><p>Cobro recurrente mensual mediante Mercado Pago.</p><ul><li>Respaldo y sincronización</li><li>Windows y dispositivos vinculados</li><li>Sucursales y visor global</li><li>Reportes por periodos</li></ul><a class="button button-primary full" href="#descargas">Probar Mai Bisness</a></article>
+      <article class="price-card"><p class="save">Ahorra $160 al año</p><p class="plan-label">PRO ANUAL</p><h3>$800 <small>MXN/año</small></h3><p>Las mismas funciones PRO con pago anual.</p><ul><li>12 meses de acceso PRO</li><li>Renovación automática anual</li><li>Cancelación desde la app</li><li>Conservas PRO hasta terminar lo pagado</li></ul></article>
+    </div><p class="billing-note">La prueba Premium dura 5 días. Al contratar, Mercado Pago muestra el importe antes de autorizar. Puedes cancelar la renovación automática desde la app; no habrá cobros futuros y conservarás PRO hasta finalizar el periodo pagado. Consulta los <a href="/terminos.html">términos completos</a>.</p></div></section>
+    <section class="section" id="descargas"><div class="wrap"><p class="section-kicker">Centro de descargas</p><h2>Instala Mai Bisness.</h2><div class="download-grid">
+      <article class="download-card ready"><div><span class="platform">ANDROID</span><h3>Mai Bisness para celular</h3><p>APK oficial firmado. Android puede pedir autorización para instalar aplicaciones descargadas desde el navegador.</p><dl><div><dt>Versión</dt><dd>1.0.0</dd></div><div><dt>Actualización</dt><dd>7 ago 2026</dd></div></dl></div><a class="button button-green full" href="/descargas/MaiBisness.apk" download>Descargar APK</a><a class="checksum" href="/descargas/MaiBisness.apk.sha256">Ver huella SHA-256</a></article>
+      <article class="download-card ready">
+        <div>
+          <span class="platform">WINDOWS</span>
+          <h3>Terminal para computadora</h3>
+          <p>Instalador oficial para Windows. El sistema puede mostrar una advertencia de editor desconocido mientras obtenemos una firma de código comercial.</p>
+          <dl>
+            <div><dt>Versión</dt><dd>1.0.0</dd></div>
+            <div><dt>Actualización</dt><dd>7 ago 2026</dd></div>
+          </dl>
         </div>
-    </section>
-
-    <section id="planes" class="py-24 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="font-brand font-black text-3xl md:text-5xl mb-4">Empieza Gratis. Crece a nivel PRO.</h2>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nuestra promesa es simple: una herramienta de cobro rápida y totalmente funcional sin costo. Actualiza a PRO solo cuando tu negocio exija un mejor control.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            
-            <div class="bg-slateDark/50 rounded-3xl p-8 md:p-10 border border-white/10">
-                <h3 class="font-brand text-3xl text-white font-bold mb-2">Mai Bisness <span class="text-gray-400">Gratis</span></h3>
-                <p class="text-gray-400 text-sm mb-8">Perfecto para dueños de un solo punto de venta que buscan dejar la libreta.</p>
-                
-                <ul class="space-y-4 text-sm text-gray-300">
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGreen text-lg mt-0.5 leading-none">✔</span> 
-                        <div>100% Offline (Guarda todo en tu memoria local)</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGreen text-lg mt-0.5 leading-none">✔</span> 
-                        <div>Calculadora rápida y Escáner de Códigos</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGreen text-lg mt-0.5 leading-none">✔</span> 
-                        <div>Inventario y Catálogo ilimitado</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGreen text-lg mt-0.5 leading-none">✔</span> 
-                        <div>Reporte y Exportación de Ventas del día actual</div>
-                    </li>
-                    <li class="flex gap-3 items-start text-gray-500">
-                        <span class="text-gray-600 text-lg mt-0.5 leading-none">✖</span> 
-                        <div>Sin respaldo en la nube (Riesgo si pierdes el equipo)</div>
-                    </li>
-                    <li class="flex gap-3 items-start text-gray-500">
-                        <span class="text-gray-600 text-lg mt-0.5 leading-none">✖</span> 
-                        <div>Solo puedes ver el corte de "Hoy"</div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-navy rounded-3xl p-8 md:p-10 border border-brandGold/40 relative overflow-hidden glow-gold transform md:-translate-y-4 shadow-2xl shadow-brandGold/10">
-                <div class="absolute top-0 right-0 bg-brandGold text-navy text-xs font-black tracking-widest px-4 py-1 rounded-bl-xl uppercase">Recomendado</div>
-                <h3 class="font-brand text-3xl text-brandGold font-bold mb-2">Mai Bisness PRO</h3>
-                <p class="text-gray-400 text-sm mb-8">Poder absoluto y sincronización para redes de locales o dueños ausentes.</p>
-                
-                <ul class="space-y-4 text-sm text-gray-200">
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGold text-lg mt-0.5 leading-none">⭐</span> 
-                        <div><b>Respaldo en la Nube Inmediato</b> (Tus datos seguros)</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGold text-lg mt-0.5 leading-none">⭐</span> 
-                        <div><b>Red Multi-Sucursales:</b> Conecta a todas tus sucursales y conoce sus ventas.</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGold text-lg mt-0.5 leading-none">⭐</span> 
-                        <div><b>Seguridad con PIN:</b> Instala en otros dispositivos con tu PIN principal o de un solo uso.</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGold text-lg mt-0.5 leading-none">⭐</span> 
-                        <div><b>Máquina del Tiempo Financiera:</b> Accede y exporta reportes de ayer, meses pasados o rangos libres.</div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <span class="text-brandGold text-lg mt-0.5 leading-none">⭐</span> 
-                        <div><b>Multi-dispositivo:</b> Combina Celulares y Cajas de Windows (PC).</div>
-                    </li>
-                </ul>
-
-                <div class="mt-10 p-4 rounded-xl bg-brandGold/10 border border-brandGold/20 text-center">
-                    <span class="text-brandGold font-bold text-sm">🎁 Tiene 5 días de Prueba al instalar.</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="pb-12 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex flex-col md:flex-row items-center justify-center gap-3 bg-slateDark/40 border border-white/5 px-6 py-4 rounded-2xl">
-                <span class="text-gray-400 text-3xl">🍎</span>
-                <span class="text-gray-400 font-medium text-sm md:text-base">
-                    Próximamente versión nativa disponible para <b class="text-gray-200">iPhone</b> y <b class="text-gray-200">Mac</b>.
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 px-6 border-t border-white/10 text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <span class="font-brand font-bold text-gray-300">MAI BISNESS</span>
-                <span>• Software Mexicano de Alto Rendimiento</span>
-            </div>
-            <p>&copy; 2026 Mai Bisness. Todos los derechos reservados. www.maibisness.com</p>
-        </div>
-    </footer>
-
+        <a class="button button-green full" href="/descargas/MaiBisness_Setup.exe" download>Descargar para Windows</a>
+        <a class="checksum" href="/descargas/MaiBisness_Setup.exe.sha256">Ver huella SHA-256</a>
+      </article>
+      <article class="download-card"><div><span class="platform">IMPORTACIÓN</span><h3>Plantilla de inventario</h3><p>Archivo CSV con las columnas necesarias para preparar una carga masiva de productos.</p></div><a class="button button-secondary full" href="/descargas/plantilla_inventario.csv" download>Descargar plantilla CSV</a></article>
+    </div><aside class="install-help"><strong>Antes de instalar:</strong> descarga únicamente desde esta página, conserva una copia de tus datos importantes y no compartas códigos de vinculación. En Android, cualquier actualización futura deberá estar firmada con la misma clave oficial.</aside></div></section>
+    <section class="section section-alt" id="seguridad"><div class="wrap security-grid"><div><p class="section-kicker">Seguridad y privacidad</p><h2>Tus datos pertenecen a tu negocio.</h2><p class="section-intro">Mai Bisness utiliza Firebase y Google Cloud para autenticación, almacenamiento y sincronización, y Mercado Pago para procesar suscripciones. No almacenamos el número completo de tu tarjeta ni tu CVV.</p><div class="actions"><a class="button button-secondary" href="/privacidad.html">Aviso de privacidad</a><a class="button button-secondary" href="/terminos.html">Términos de uso</a></div></div><ul class="security-list"><li><strong>Códigos de un solo uso</strong><span>Las vinculaciones temporales vencen y no pueden reutilizarse.</span></li><li><strong>Acceso por función</strong><span>Dueño, caja y sucursal reciben permisos diferentes.</span></li><li><strong>Control del usuario</strong><span>Puedes cancelar la renovación y ejercer tus derechos ARCO.</span></li></ul></div></section>
+    <section class="cta"><div class="wrap cta-box"><div><p class="section-kicker">Listo para dejar la libreta</p><h2>Empieza a ordenar tu negocio hoy.</h2><p>Instala la versión para Android y prueba las funciones Premium durante cinco días.</p></div><a class="button button-primary" href="#descargas">Ir a descargas</a></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-grid"><div class="footer-brand"><img src="/logoMaiBisness_original.png" alt="" width="42" height="42"><div><strong>MAI BISNESS</strong><span>Software mexicano para negocios reales.</span></div></div><nav aria-label="Información legal"><a href="/privacidad.html">Privacidad</a><a href="/terminos.html">Términos</a><a href="mailto:rubsalgher@gmail.com">Contacto</a></nav><p>© 2026 Mai Bisness · Ruben Salgado</p></div></footer>
 </body>
 </html>

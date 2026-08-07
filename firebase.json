@@ -1,0 +1,66 @@
+{
+    "hosting":  {
+                    "public":  ".",
+                    "ignore":  [
+                                   "firebase.json",
+                                   ".git/**",
+                                   ".firebase/**",
+                                   "README.md",
+                                   "descargas/MaiBisness_Setup.exe"
+                               ],
+                    "headers":  [
+                                    {
+                                        "source":  "**",
+                                        "headers":  [
+                                                        {
+                                                            "key":  "Content-Security-Policy",
+                                                            "value":  "default-src \u0027self\u0027; img-src \u0027self\u0027 data:; style-src \u0027self\u0027; script-src \u0027none\u0027; connect-src \u0027none\u0027; object-src \u0027none\u0027; base-uri \u0027self\u0027; frame-ancestors \u0027none\u0027; form-action \u0027none\u0027; upgrade-insecure-requests"
+                                                        },
+                                                        {
+                                                            "key":  "X-Content-Type-Options",
+                                                            "value":  "nosniff"
+                                                        },
+                                                        {
+                                                            "key":  "Referrer-Policy",
+                                                            "value":  "strict-origin-when-cross-origin"
+                                                        },
+                                                        {
+                                                            "key":  "X-Frame-Options",
+                                                            "value":  "DENY"
+                                                        },
+                                                        {
+                                                            "key":  "Permissions-Policy",
+                                                            "value":  "camera=(), microphone=(), geolocation=()"
+                                                        }
+                                                    ]
+                                    },
+                                    {
+                                        "source":  "**/*.@(html|xml)",
+                                        "headers":  [
+                                                        {
+                                                            "key":  "Cache-Control",
+                                                            "value":  "public, max-age=0, must-revalidate"
+                                                        }
+                                                    ]
+                                    },
+                                    {
+                                        "source":  "**/*.@(css|png)",
+                                        "headers":  [
+                                                        {
+                                                            "key":  "Cache-Control",
+                                                            "value":  "public, max-age=3600"
+                                                        }
+                                                    ]
+                                    },
+                                    {
+                                        "source":  "descargas/**",
+                                        "headers":  [
+                                                        {
+                                                            "key":  "Cache-Control",
+                                                            "value":  "public, max-age=3600"
+                                                        }
+                                                    ]
+                                    }
+                                ]
+                }
+}
