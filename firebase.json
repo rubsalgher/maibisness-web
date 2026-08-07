@@ -5,8 +5,7 @@
                                    "firebase.json",
                                    ".git/**",
                                    ".firebase/**",
-                                   "README.md",
-                                   "descargas/MaiBisness_Setup.exe"
+                                   "README.md"
                                ],
                     "headers":  [
                                     {
